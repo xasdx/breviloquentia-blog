@@ -1,4 +1,4 @@
 language: ruby
 
 before_script:
-  - rails db:migrate RAILS_ENV=test
+  - RAILS_ENV=test bundle exec rake db:migrate
