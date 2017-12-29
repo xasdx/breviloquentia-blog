@@ -1,12 +1,13 @@
 source 'https://rubygems.org'
 
 gem 'rails', '~> 5.1.4'
-gem 'sqlite3'
+gem 'pg'
 gem 'puma', '~> 3.7'
 gem 'jbuilder'
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.5'
+  gem 'sqlite3'
 end
 
 group :development do
