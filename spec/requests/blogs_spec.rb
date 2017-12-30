@@ -22,4 +22,15 @@ RSpec.describe 'Blogs API', type: :request do
       expect(json['id']).to eq blog_id
     end
   end
+  
+  describe 'POST /todos' do
+    
+    let (:blog) { { name: 'My blog', user_id: 'a895d056dbb04b56ac19404171a42480' } }
+    
+    it 'creates a blog' do
+      post '/blogs', params: blog
+      expect(response).to have_http_status 201
+      expect(json['name']).to eq 'My blog'
+    end
+  end
 end

@@ -2,11 +2,22 @@ class BlogsController < ApplicationController
   
   def index
     @blogs = Blog.all
-    render json: @blogs, status: :ok
+    json_response @blogs
   end
   
   def show
     @blog = Blog.find params[:id]
-    render json: @blog, status: :ok
+    json_response @blog
+  end
+  
+  def create
+    @blog = Blog.create blog_params
+    json_response @blog, :created
+  end
+  
+  private
+  
+  def blog_params
+    params.permit(:name, :title, :subtitle, :description, :user_id)
   end
 end
