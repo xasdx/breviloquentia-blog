@@ -1,9 +1,13 @@
 language: ruby
-
 services:
-  - docker
-
+- docker
 install: true
-
 script:
-  - bash bin/docker_test.sh
+- bash bin/docker_test.sh
+deploy:
+  provider: heroku
+  app: brev-blog
+  run:
+  - rake db:migrate
+  api_key:
+    secure: lTE7UiZgwRT/1HlFGNt7038CDsLv9CABiq8eJEGJdxzdeaU6NT77kBUszyW6OUu2LspUFYR2zmuKuOm2JP1uw+7rATD1rGUApTL2K8KdQIXOmqBQ1DAark06owHnyjVzh1PsBo2AE09Ilzp4x5VpR7FVTm9Uo71u7zHxQb6CjSbxXv5CEqhqPMM/aL/n1ZCFwZiGhSRrh7SU+qKSEjuu1WkPg9zr3dnTgutp5X2bsFVuVny1C3vLntSuli2+Elk4MkR2U0bxMrH/4Yo1dLfMWG+WkOBMtxXrFiUi2xSjZn+6U7ZlHto8ZbHflxemB1TvqLFF4WWhXplIlZ8kc4JiSL8Y9lejLaeraHJxa6GFreC8W4nJ6bIis2K4B5IHwE8q2AhiX/8tYwGcM8CVBvtbYIphrFTc8Izi/OHk3biolA+zDeOmOEIhi1BlkjAxN4Ocfg8q6RR9vT5HtiCO2cdAtoSf4i/iI3DeiKQObeum1OnY+fFzbVLJuHRsRiiMMzIec+1rj4ID5k0oWDYTNobhdV/p+w+BJWnwHjapyFQRRr6XHcNqpa1S4V+/p61nsMbuviuAM78abwyjkhp9wCh8MWpejivdDo9iLyaRn06iuwqMhM6X3LloSJIlOyNMzXXnDL9mB0mnRyH49ALUxVUcBiRxN0KQrC+SYHBMdZq6Gjc=
