@@ -1,7 +1,7 @@
 language: ruby
 
-before_script:
-  - RAILS_ENV=test bundle exec rake db:migrate
+services:
+  - docker
 
 script:
-  - bundle exec rspec --format documentation
+  - bash bin/docker_test.sh
