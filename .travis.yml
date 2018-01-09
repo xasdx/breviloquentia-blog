@@ -3,5 +3,7 @@ language: ruby
 services:
   - docker
 
+install: true
+
 script:
   - bash bin/docker_test.sh
