@@ -5,7 +5,6 @@ services:
 install: true
 
 script:
-  - bundle exec rubocop
   - bash bin/docker_test.sh
 
 deploy:
