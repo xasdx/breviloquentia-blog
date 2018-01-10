@@ -1,9 +1,9 @@
 source 'https://rubygems.org'
 
-gem 'rails', '~> 5.1.4'
+gem 'jbuilder'
 gem 'pg'
 gem 'puma', '~> 3.7'
-gem 'jbuilder'
+gem 'rails', '~> 5.1.4'
 gem 'rubocop'
 
 group :development, :test do
@@ -18,10 +18,10 @@ group :development do
 end
 
 group :test do
-  gem 'factory_bot_rails'
-  gem 'shoulda-matchers'
-  gem 'faker'
   gem 'database_cleaner'
+  gem 'factory_bot_rails'
+  gem 'faker'
+  gem 'shoulda-matchers'
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
