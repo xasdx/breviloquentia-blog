@@ -23,7 +23,7 @@ RSpec.describe 'Blogs API', type: :request do
     end
   end
   
-  describe 'POST /todos' do
+  describe "POST /todos" do
     
     let (:blog) { { name: 'My blog', user_id: 'a895d056dbb04b56ac19404171a42480' } }
     
