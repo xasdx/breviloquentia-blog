@@ -4,6 +4,7 @@ gem 'rails', '~> 5.1.4'
 gem 'pg'
 gem 'puma', '~> 3.7'
 gem 'jbuilder'
+gem 'rubocop'
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.5'
